@@ -1,0 +1,12 @@
+1. Register taskbar with window.
+-open powershell (shift + right click on desktop and choose powershell)
+-paste script below to register taskbar with window:
+Get-appxpackage -all *shellexperience* -packagetype bundle |% {add-appxpackage -register -disabledevelopmentmode ($_.installlocation + “\appxmetadata\appxbundlemanifest.xml”)}
+
+2. uninstall window update by
+- open powershell (shift + right click on desktop and choose powershell)
+- type "control". it will open control pannel
+- choose uninstall program
+- on left side, you will see "View installed updates" <=choose it
+- in group Microsoft window, you choose a latest version of window update and uninstall it
+- restart PC py using command in powershell "shutdown -r -t 0"

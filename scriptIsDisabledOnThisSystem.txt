@@ -1,0 +1,10 @@
+"File C:\Users\admin\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system. 
+For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170."
+This error occurs when your system has disabled the running script and your system is can’t accept the ng commands. 
+This error occurs due to security reasons and won't let the script be executed on your system without your approval.
+Then you have to open the PowerShell with administrative rights.
+ 
+To solve this problem, you need to follow a few steps:
+1. open cmd or powershell
+2. paste and run "set-ExecutionPolicy RemoteSigned -Scope CurrentUser"=> yes
+3. run "et-ExecutionPolicy"

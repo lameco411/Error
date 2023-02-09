@@ -1,0 +1,10 @@
+use TANQUANG
+go
+alter DATABASE TANQUANG
+set recovery simple with no_wait;
+go
+dbcc shrinkfile(TANQUANG_Log,1);
+go
+alter database TANQUANG
+set recovery full with no_wait;
+go
